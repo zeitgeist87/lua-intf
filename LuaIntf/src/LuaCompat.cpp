@@ -413,6 +413,8 @@ static LUA_INLINE void _luaL_pushfuncname(lua_State* L, lua_Debug* ar)
     }
 }
 
+#ifndef LUAJIT_VERSION
+
 LUA_INLINE void luaL_traceback(lua_State* L, lua_State* L1, const char* msg, int level)
 {
     const int LEVELS1 = 12;  /* size of the first part of the stack */
@@ -459,6 +461,8 @@ LUA_INLINE int luaL_fileresult(lua_State* L, int stat, const char* fname)
         return 3;
     }
 }
+
+#endif
 
 //---------------------------------------------------------------------------
 

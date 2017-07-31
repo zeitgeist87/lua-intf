@@ -120,8 +120,7 @@ extern "C"
 {
 #endif
 
-#include "lualib.h"
-#include "lauxlib.h"
+#include "lua.hpp"
 
 #if !LUAINTF_LINK_LUA_COMPILED_IN_CXX
 }
